@@ -1,0 +1,25 @@
+# Annotated interactive session - python3 (Task 2 evidence)
+>>> type(10), type(10.0), type('10'), type(True), type([10, 8.5])
+(<class 'int'>, <class 'float'>, <class 'str'>, <class 'bool'>, <class 'list'>)
+>>> 7 / 2
+3.5
+>>> 7 // 2
+3
+>>> 7 % 2
+1
+>>> -7 // 2
+-4
+# floor division rounds DOWN: -7//2 == -4 (not -3)
+>>> 0.1 + 0.2
+0.30000000000000004
+>>> 0.1 + 0.2 == 0.3
+False
+# binary floats cannot store 0.1/0.2 exactly -> tiny error -> False
+>>> from decimal import Decimal
+>>> Decimal('0.1') + Decimal('0.2') == Decimal('0.3')
+True
+# decimal module: exact base-10 arithmetic -> True
+>>> import sys
+>>> sys.getsizeof(33400.30), sys.getsizeof(3340030)
+(24, 28)
+# a float (24 B) is smaller than a big int (28 B)

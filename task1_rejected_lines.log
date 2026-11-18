@@ -1,0 +1,2 @@
+line 3: '192311003,Arun' -> list index out of range
+line 6: '192311005,Kumar,-300' -> negative amount -300
